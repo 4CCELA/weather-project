@@ -1,0 +1,66 @@
+.search-bar {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 50px;
+}
+
+section {
+  text-align: center;
+  padding: 0px 50px 0px 50px;
+}
+
+.sun {
+  font-size: 100px;
+  padding: 10px 10px;
+}
+
+background {
+  color: white;
+}
+
+.highs,
+.lows {
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.low-temp,
+.high-temp {
+  padding: 10px 10px;
+  font-size: 30px;
+}
+
+.body {
+  background: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+  margin: 50px 50px;
+}
+
+.current-temp {
+  padding: 10px;
+  font-size: 20px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 40px;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+input[type="submit"] {
+  color: white;
+  background: #6a85b6;
+}
+
+.forecast {
+  color: #6a85b6;
+  padding: 50px;
+  text-align: center;
+}
+
+.weather-icon {
+  font-size: 50px;
+}
