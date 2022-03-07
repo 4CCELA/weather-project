@@ -65,6 +65,6 @@ input[type="submit"] {
   font-size: 50px;
 }
 
-.description {
+h3 {
   text-transform: capitalize;
 }
