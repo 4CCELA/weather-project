@@ -34,8 +34,8 @@ background {
 .body {
   background: linear-gradient(
     109.6deg,
-    rgb(255, 207, 84) 11.2%,
-    rgb(255, 158, 27) 91.1%
+    rgb(255, 194, 48) 11.2%,
+    rgb(255, 124, 0) 100.2%
   );
   margin: 50px 50px;
 }
@@ -56,11 +56,11 @@ body {
 
 input[type="submit"] {
   color: white;
-  background: rgb(255, 158, 27) 91.1%;
+  background: rgb(255, 124, 0) 100.2;
 }
 
 .forecast {
-  color: rgb(255, 158, 27) 91.1%;
+  color: rgb(255, 124, 0) 100.2;
   padding: 50px;
   text-align: center;
 }
