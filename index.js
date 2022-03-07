@@ -36,7 +36,6 @@ function showWeather(response) {
   document.querySelector("#high-temp").innerHTML = Math.round(
     response.data.main.temp_max * (9 / 5) + 32
   );
-
   document.querySelector("#low-temp").innerHTML = Math.round(
     response.data.main.temp_min * (9 / 5) + 32
   );
@@ -46,6 +45,8 @@ function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector("#search-bar").value;
   search(city);
+  let description = document.querySelector("h3");
+  description.innerHTML = response.data.weather[0].description;
 }
 function searchLocation(position) {
   let apiKey = "3ba204fa15dbbaba90617ba765f650d7";

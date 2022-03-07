@@ -64,3 +64,7 @@ input[type="submit"] {
 .weather-icon {
   font-size: 50px;
 }
+
+h3 {
+  text-transform: capitalize;
+}
