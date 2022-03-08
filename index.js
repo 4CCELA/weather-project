@@ -50,7 +50,10 @@ function showWeather(response) {
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(`icons/${response.data.weather[0].icon}.png`);
+  iconElement.setAttribute(
+    "images",
+    `images/icons/${response.data.weather[0].icon}.png`
+  );
 }
 
 function searchCity(event) {
