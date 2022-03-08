@@ -65,9 +65,11 @@ function showWeather(response) {
   );
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
-  let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute("src", `icons/${response.data.weather[0].icon}.png`);
-}
+    updateIcon(
+    document.querySelector("#weather-icon"),
+    response.data.weather[0].icon,
+    response.data.weather[0].description
+  );
 
 function searchCity(event) {
   event.preventDefault();
