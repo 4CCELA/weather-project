@@ -1,27 +1,3 @@
-function updateIcon(iconElement, icon, description) {
-  const icons = {
-    "01d": "01d.svg",
-    "01n": "01n.svg",
-    "02d": "02d.svg",
-    "02n": "02n.svg",
-    "03d": "03d.svg",
-    "03n": "03n.svg",
-    "04d": "04d.svg",
-    "04n": "04n.svg",
-    "09d": "09d.svg",
-    "09n": "09d.svg",
-    "10d": "10d.svg",
-    "10n": "10d.svg",
-    "11d": "11d.svg",
-    "11n": "11d.svg",
-    "13d": "13d.svg",
-    "13n": "13d.svg",
-    "50d": "50d.svg",
-    "50n": "50d.svg",
-  };
-  iconElement.setAttribute("alt", description);
-  iconElement.setAttribute("src", `images/icons/${icons[icon]}`);
-}
 let now = new Date();
 
 let h3 = document.querySelector("h3");
@@ -65,10 +41,10 @@ function showWeather(response) {
   );
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
-  updateIcon(
-    document.querySelector("#weather-icon"),
-    response.data.weather[0].icon,
-    response.data.weather[0].description
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
