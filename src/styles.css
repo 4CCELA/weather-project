@@ -32,11 +32,7 @@ background {
 }
 
 .body {
-  background: radial-gradient(
-    343px at 46.3% 47.5%,
-    rgb(242, 242, 242) 0%,
-    rgb(241, 241, 241) 72.9%
-  );
+  background: linear-gradient(to right, #868f96 0%, #596164 100%);
 
   margin: 50px 50px;
 }
