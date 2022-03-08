@@ -93,6 +93,8 @@ h3 {
 .location-icon {
   align-items: center;
   height: 100%;
+  padding: 4px 0;
+  display: flex;
 }
 
 h5 {
