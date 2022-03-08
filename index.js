@@ -65,11 +65,12 @@ function showWeather(response) {
   );
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
-    updateIcon(
+  updateIcon(
     document.querySelector("#weather-icon"),
     response.data.weather[0].icon,
     response.data.weather[0].description
   );
+}
 
 function searchCity(event) {
   event.preventDefault();
