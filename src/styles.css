@@ -11,7 +11,7 @@ section {
 }
 
 background {
-  color: #0c0c0c;
+  color: #221815;
 }
 
 .highs,
@@ -24,11 +24,11 @@ background {
 .high-temp {
   padding: 10px 10px;
   font-size: 30px;
-  color: #0c0c0c;
+  color: #221815;
 }
 
 .body {
-  background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+  background: #f9f6f7;
   margin: 50px 50px;
 }
 
@@ -39,7 +39,7 @@ background {
 
 #temperature,
 .units {
-  color: #2b2a2a;
+  color: #221815;
 }
 
 h2 {
@@ -53,11 +53,11 @@ body {
 
 input[type="submit"] {
   color: white;
-  background: #ec6e4d;
+  background: #105ed3;
 }
 
 .forecast {
-  color: #0c0c0c;
+  color: #545456;
   padding: 50px;
   text-align: center;
 }
@@ -71,11 +71,11 @@ h3 {
 }
 
 .days {
-  color: #0c0c0c;
+  color: #221815;
 }
 
 #city-name {
-  color: #0c0c0c;
+  color: #221815;
 }
 
 #time {
@@ -91,7 +91,15 @@ h3 {
 }
 
 .location-icon {
-  display: inline-flex;
   align-items: center;
   height: 100%;
+}
+
+h5 {
+  text-align: center;
+  font-size: 35px;
+}
+
+li {
+  list-style: none;
 }
