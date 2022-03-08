@@ -105,3 +105,7 @@ h5 {
 li {
   list-style: none;
 }
+
+.credits {
+  text-align: center;
+}
