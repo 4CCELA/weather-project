@@ -32,8 +32,7 @@ background {
 }
 
 .body {
-  background: linear-gradient(to right, #868f96 0%, #596164 100%);
-
+  background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
   margin: 50px 50px;
 }
 
