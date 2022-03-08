@@ -51,7 +51,7 @@ function showWeather(response) {
   description.innerHTML = response.data.weather[0].description;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
-    "images",
+    "src",
     `images/icons/${response.data.weather[0].icon}.png`
   );
 }
