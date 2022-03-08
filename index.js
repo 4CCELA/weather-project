@@ -69,4 +69,12 @@ searchForm.addEventListener("submit", searchCity);
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+function showCelciusTemp(event) {
+  event.preventDefault;
+  let celciusTemp = Math.round(((temperatureElement.innerHTML - 32) * 5) / 9);
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemp);
+}
+let celciusLink = document.querySelector("#celcius");
+celciusLink.addEventListener("click", showCelciusTemp);
 search("Los Angeles");
