@@ -89,3 +89,9 @@ h3 {
 #icon {
   max-width: 200px;
 }
+
+.location-icon {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}

@@ -29,6 +29,14 @@ h3.innerHTML = `${day}, ${hour}:${minutes}`;
 
 function showWeather(response) {
   console.log(response);
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = response.data.main.humidity;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  let feelsLike = document.querySelector("#feels-like");
+  feelsLike.innerHTML = Math.round(
+    response.data.main.feels_like * (9 / 5) + 32
+  );
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp * (9 / 5) + 32

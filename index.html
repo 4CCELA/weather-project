@@ -21,24 +21,32 @@
     />
     <script
       src="https://kit.fontawesome.com/3eda2076b8.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="body">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col-9">
             <div class="search-bar">
               <form id="search-form">
-                <input type="text" id="search-bar" placeholder="Enter City..." autocomplete="off"/>
-                <input type="submit" id="search-button" class="btn btn-dark" value="Search" />
-                <input type="submit" id="current-location" class="btn btn-dark" value="Current">
-             
+                <div class="input-group">
+                <input type="text" id="search-bar" placeholder="Enter City..." class="form-control" autocomplete="off"/>
+                <input type="submit" id="search-button" class="btn btn-primary" value="Search" />
+                </div>
+                <div class="col-3">
+                <div class="location-icon">
+                <button type="button" class="btn btn-primary" id="current-location">
+                    <span class="location-icon">
+                    <ion-icon name="compass-outline"></ion-icon>
+                    </span>
+                  </button>
+                </div>
               </form>
             </div>
-          </div>    
+          </div>
+        </div> 
             <section>
               <background>
                 <div class="city" id="city-name"><h1><strong></strong></h1></div>
@@ -54,24 +62,39 @@
                 <h2><strong><span class="temperature" id="temperature"></span>
                   <span class="units"><strong>ºF</span></strong></h2>
                 <br />
-                <hr />
                 <div class="container">
-                  <div class="row row-cols-2">
-                    <span class="border-end">
-                      <div class="col highs"><strong>Highs</strong></div>
-                      <div class="high-temp" id="high-temp"></div>
-                    </span>
-                    <span class="border-0">
-                      <div class="col lows"><strong>Lows</strong></div>
-                      <div class="low-temp" id="low-temp"></div>
-                    </span>
+                    <div class="row">
+                        <div class="row justify-content-center">
+                            <div class="col-4">
+                                <div class="col highs"><strong>Highs</strong></div>
+                                <div class="high-temp" id="high-temp"></div>
+                            </div>
+                            <div class="col-4">
+                                <div class="col lows"><strong>Lows</strong></div>
+                                <div class="low-temp" id="low-temp"></div>
+                            </div>
                   </div>
                 </div>
                 <hr />
+              <li>
+                Feels Like: <span id="feels-like"></span> ºF
+              </li>
+            <li>
+                Precipitation: <span id="precipitation"></span>%
+          </li>
+          <li>
+            Humidity: <span id="humidity"></span>%
+          </li>
+          <li>
+            Wind: <span id="wind"></span> mph
+          </li>
+                <hr />
               </background>
             </section>
+            <br />
+                <h5>Future Forecast</h5>
             <div class="container forecast">
-              <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+              <div class="row row-cols-5 row-cols-lg-5 g-2 g-lg-3">
                 <div class="col">
                   <div class="p-3 border bg-light">
                     <span class="days">Sun.</span><br />
@@ -114,6 +137,8 @@
         </div>
       </div>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
   <a href="https://github.com/4CCELA/weather-project">Open-source code</a>  by Danika Piromgraipakd
 </html>
