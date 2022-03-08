@@ -106,6 +106,6 @@ li {
   list-style: none;
 }
 
-.credits {
-  text-align: center;
+footer {
+  align-items: center;
 }
