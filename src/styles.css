@@ -23,6 +23,7 @@ background {
 .lows {
   font-size: 30px;
   text-decoration: underline;
+  color: #ec6e4d;
 }
 
 .low-temp,
