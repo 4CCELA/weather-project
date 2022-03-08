@@ -16,7 +16,7 @@ section {
 }
 
 background {
-  color: #ec6e4d;
+  color: #0c0c0c;
 }
 
 .highs,
@@ -33,6 +33,7 @@ background {
 
 .body {
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
   margin: 50px 50px;
 }
 
@@ -52,11 +53,11 @@ body {
 
 input[type="submit"] {
   color: white;
-  background: #ec6e4d;
+  background: #6a85b6;
 }
 
 .forecast {
-  color: #ec6e4d;
+  color: #0c0c0c;
   padding: 50px;
   text-align: center;
 }
