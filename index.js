@@ -42,10 +42,7 @@ function showWeather(response) {
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src", `icons/${response.data.weather[0].icon}.svg`);
 }
 
 function searchCity(event) {
