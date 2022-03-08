@@ -10,11 +10,6 @@ section {
   padding: 0px 50px 0px 50px;
 }
 
-.sun {
-  font-size: 100px;
-  padding: 10px 10px;
-}
-
 background {
   color: #0c0c0c;
 }
@@ -23,13 +18,13 @@ background {
 .lows {
   font-size: 30px;
   text-decoration: underline;
-  color: #ec6e4d;
 }
 
 .low-temp,
 .high-temp {
   padding: 10px 10px;
   font-size: 30px;
+  color: #0c0c0c;
 }
 
 .body {
@@ -39,7 +34,12 @@ background {
 
 .current-temp {
   padding: 10px;
-  font-size: 20px;
+  font-size: 28px;
+}
+
+#temperature,
+.units {
+  color: #2b2a2a;
 }
 
 h2 {
@@ -68,4 +68,20 @@ input[type="submit"] {
 
 h3 {
   text-transform: capitalize;
+}
+
+.days {
+  color: #0c0c0c;
+}
+
+#city-name {
+  color: #0c0c0c;
+}
+
+#time {
+  color: #545456;
+}
+
+#description {
+  font-size: 35px;
 }
