@@ -25,26 +25,18 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <div class="body">
+    <div class="background">
       <div class="container">
         <div class="row">
-          <div class="col-9">
+          <div class="col">
             <div class="search-bar">
               <form id="search-form">
                 <div class="input-group">
-                <input type="text" id="search-bar" placeholder="Enter City..." class="form-control" autocomplete="off"/>
+                <input type="text" id="search-bar" placeholder="Enter City..." class="form-control" autocomplete="off" autofocus="off"/>
                 <input type="submit" id="search-button" class="btn btn-primary" value="Search" />
                 </div>
-                <div class="col-3">
-                <div class="location-icon">
-                <button type="button" class="btn btn-primary" id="current-location">
-                    <span class="location-icon">
-                    <ion-icon name="compass-outline"></ion-icon>
-                    </span>
-                  </button>
-                </div>
-              </form>
-            </div>
+            </form>
+            </div>  
           </div>
         </div> 
             <section>
@@ -60,33 +52,30 @@
                 <br />
                 <div class="current-temp">Current Temperature</div>
                 <h2><strong><span class="temperature" id="temperature"></span>
-                  <span class="units"><strong>ºF</span></strong></h2>
+                  <strong><span class="units">ºF</span></strong></h2>
                 <br />
                 <div class="container">
                     <div class="row">
                         <div class="row justify-content-center">
                             <div class="col-4">
                                 <div class="col highs"><strong>Highs</strong></div>
-                                <span class="high-temp" id="high-temp"></span> ºF
+                                <span class="high-temp" id="high-temp"></span>ºF
                             </div>
                             <div class="col-4">
                                 <div class="col lows"><strong>Lows</strong></div>
-                                <span class="low-temp" id="low-temp"></span> ºF
+                                <span class="low-temp" id="low-temp"></span>ºF
                             </div>
                   </div>
                 </div>
                 <hr />
-          <li>
+              <li>
                 Feels Like: <span id="feels-like"></span> ºF
+              </li>
+          <li>
+            Humidity: <span id="humidity"></span>%
           </li>
           <li>
-                Precipitation: <span id="precipitation"></span>%
-          </li>
-          <li>
-                Humidity: <span id="humidity"></span>%
-          </li>
-          <li>
-                Wind: <span id="wind"></span> mph
+            Wind: <span id="wind"></span> mph
           </li>
                 <hr />
               </background>
@@ -98,35 +87,35 @@
                 <div class="col">
                   <div class="p-3 border bg-light">
                     <span class="days">Sun.</span><br />
-                    77 ºF | 49 ºF<br /><br />
+                    77 | 49 <br /><br />
                     <i class="fas fa-sun weather-icon"></i>
                   </div>
                 </div>
                 <div class="col">
                   <div class="p-3 border bg-light">
                     <span class="days">Mon.</span><br />
-                    77 ºF | 49 ºF<br /><br />
+                    77 | 49 <br /><br />
                     <i class="fas fa-sun weather-icon"></i>
                   </div>
                 </div>
                 <div class="col">
                   <div class="p-3 border bg-light">
                     <span class="days">Tue.</span><br />
-                    79 ºF | 55 ºF<br /><br />
+                    77 | 39<br /><br />
                     <i class="fas fa-sun weather-icon"></i>
                   </div>
                 </div>
                 <div class="col">
                   <div class="p-3 border bg-light">
                     <span class="days">Wed.</span><br />
-                    84 ºF | 57 ºF<br /><br />
+                    84 | 57 <br /><br />
                     <i class="fas fa-sun weather-icon"></i>
                   </div>
                 </div>
                 <div class="col">
                   <div class="p-3 border bg-light">
                     <span class="days">Thu.</span><br />
-                    84 ºF | 53 ºF<br /><br />
+                    84 | 53 <br /><br />
                     <i class="fas fa-sun weather-icon" class="forecast-icon"></i></div>
                     <script src="index.js"></script>
                   </div>
