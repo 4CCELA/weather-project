@@ -53,6 +53,26 @@ function showWeather(response) {
   iconElement.setAttribute("src", `icons/${response.data.weather[0].icon}.png`);
 }
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="container forecast" id="forecast">
+  <div class="row row-cols-5 row-cols-lg-5 g-2 g-lg-3">`;
+  let days = ["Sun.", "Mon.", "Tues", "Wed.", "Thu."];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+                  <div class="p-3 border bg-light">
+                    <span class="days">${day}</span><br />
+                    <span class="high-temps" id="high-temps">77</span>º | <span class="low-temps" id="low-temps">43</span>º<br /><br />
+                    <img src="icons/01d.png" id="icons"/>
+                  </div>
+                </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector("#search-bar").value;
@@ -66,5 +86,7 @@ function searchLocation(position) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
+
+showForecast();
 
 search("Los Angeles");
