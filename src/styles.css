@@ -24,11 +24,18 @@ background {
 .high-temp {
   padding: 10px 10px;
   font-size: 30px;
-  color: #221815;
+}
+
+.low-temp {
+  color: #113f67;
+}
+
+.high-temp {
+  color: #671111;
 }
 
 .background {
-  background: #f9f6f7;
+  background: #e7eaf6;
   margin: 50px 50px;
 }
 
@@ -52,8 +59,8 @@ body {
 }
 
 input[type="submit"] {
-  color: white;
-  background: #105ed3;
+  color: #e7eaf6;
+  background: #38598b;
 }
 
 .forecast {
