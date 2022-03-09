@@ -54,13 +54,10 @@ h2 {
   font-size: 40px;
 }
 
-body {
-  font-family: "Josefin Sans", sans-serif;
-}
-
 input[type="submit"] {
-  color: #e7eaf6;
-  background: #38598b;
+  color: #113f67;
+  background: #e7eaf6;
+  border-color: #113f67;
 }
 
 .forecast {
@@ -111,6 +108,7 @@ h5 {
 
 li {
   list-style: none;
+  font-size: 30px;
 }
 
 footer {
