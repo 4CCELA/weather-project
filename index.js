@@ -19,6 +19,14 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function search(city) {
   let apiKey = "3ba204fa15dbbaba90617ba765f650d7";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -26,6 +34,13 @@ function search(city) {
 }
 
 h3.innerHTML = `${day}, ${hour}:${minutes}`;
+
+function getForecast(coordinates) {
+  let apiKey = "3ba204fa15dbbaba90617ba765f650d7";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(showForecast);
+}
 
 function showWeather(response) {
   console.log(response);
@@ -51,23 +66,38 @@ function showWeather(response) {
   description.innerHTML = response.data.weather[0].description;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `icons/${response.data.weather[0].icon}.png`);
+
+  getForecast(response.data.coord);
 }
 
-function showForecast() {
+function showForecast(response) {
+  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
+
   let forecastHTML = `<div class="container forecast" id="forecast">
   <div class="row row-cols-5 row-cols-lg-5 g-2 g-lg-3">`;
-  let days = ["Sun.", "Mon.", "Tues", "Wed.", "Thu."];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
+                <div class="col">
                   <div class="p-3 border bg-light">
-                    <span class="days">${day}</span><br />
-                    <span class="high-temps" id="high-temps">77</span>º | <span class="low-temps" id="low-temps">43</span>º<br /><br />
-                    <img src="icons/01d.png" id="icons"/>
+                    <span class="days">${formatDay(forecastDay.dt)}</span><br />
+                    <span class="high-temps" id="high-temps">${Math.round(
+                      forecastDay.temp.max * (9 / 5) + 32
+                    )}</span>º | <span class="low-temps" id="low-temps">${Math.round(
+          forecastDay.temp.min * (9 / 5) + 32
+        )}</span>º<br /><br />
+                    <img src="icons/${
+                      forecastDay.weather[0].icon
+                    }.png" id="icons"/>
                   </div>
-                </div>`;
+                </div>
+                `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -86,6 +116,8 @@ function searchLocation(position) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
+
+search("Los Angeles");
 
 showForecast();
 
