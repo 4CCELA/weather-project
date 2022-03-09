@@ -64,6 +64,13 @@ input[type="submit"] {
   border-color: #ced4da;
 }
 
+input[type="submit"]:hover {
+  color: #a2a8d3;
+  background: white;
+  border-color: #ced4da;
+  transition: 100ms ease-in-out;
+}
+
 .forecast {
   color: #545456;
   padding: 50px;
