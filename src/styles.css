@@ -1,3 +1,7 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
 .search-bar {
   display: block;
   margin: 0 auto;
@@ -55,9 +59,9 @@ h2 {
 }
 
 input[type="submit"] {
-  color: #113f67;
+  color: white;
   background: #e7eaf6;
-  border-color: #113f67;
+  border-color: white;
 }
 
 .forecast {
