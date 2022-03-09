@@ -38,6 +38,14 @@ background {
   color: #671111;
 }
 
+.low-temps {
+  color: #113f67;
+}
+
+.high-temps {
+  color: #671111;
+}
+
 .background {
   background: #e7eaf6;
   margin: 50px 50px;
