@@ -133,3 +133,7 @@ li {
 footer {
   align-items: center;
 }
+
+#icons {
+  max-width: 50px;
+}
